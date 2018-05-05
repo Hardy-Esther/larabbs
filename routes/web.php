@@ -42,3 +42,4 @@ Route::resource('users', 'UsersController', [
         'edit',
     ],
 ]);
+Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
