@@ -65,3 +65,5 @@ Route::resource('replies', 'RepliesController')
         'store',
         'destroy',
     ]);
+
+Route::resource('notifications', 'NotificationsController')->only(['index']);
