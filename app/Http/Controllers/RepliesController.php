@@ -33,7 +33,7 @@ class RepliesController extends Controller
         $reply->delete();
 
         return redirect()
-            ->route('replies.index')
-            ->with('success', '删除成功！');
+            ->to($reply->topic->link())
+            ->with('success', '成功删除回复！');
     }
 }
