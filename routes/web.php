@@ -45,7 +45,6 @@ Route::resource('users', 'UsersController', [
 Route::resource('topics', 'TopicsController', [
     'only' => [
         'index',
-        'show',
         'create',
         'store',
         'update',
@@ -53,6 +52,8 @@ Route::resource('topics', 'TopicsController', [
         'destroy',
     ],
 ]);
+Route::get('topics/{topic}/{slug?}', 'TopicsController@show')
+    ->name('topics.show');
 
 Route::resource('categories', 'CategoriesController', [
     'only' => [
