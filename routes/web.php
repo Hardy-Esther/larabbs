@@ -59,3 +59,6 @@ Route::resource('categories', 'CategoriesController', [
         'show'
     ]
 ]);
+
+Route::post('upload_image', 'TopicsController@uploadImage')
+    ->name('topics.upload_image');
